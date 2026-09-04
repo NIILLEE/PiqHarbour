@@ -1,0 +1,37 @@
+.post-image {
+  position: relative;
+}
+
+.post-image img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.post-image__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(6, 10, 51, 0.6);
+  color: var(--color-white);
+  border: none;
+  font-family: var(--font-ui);
+  font-size: 1.2rem;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.post-image__nav--prev {
+  left: 0.75rem;
+}
+
+.post-image__nav--next {
+  right: 0.75rem;
+}
+
+.post-image__nav:hover {
+  background-color: var(--color-blue);
+}

@@ -1,0 +1,23 @@
+.posts-list {
+  margin-top: 1.5rem;
+}
+
+.posts-list h3 {
+  font-family: var(--font-ui);
+  color: var(--color-white);
+  margin-bottom: 0.75rem;
+}
+
+.posts-list__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.75rem;
+}
+
+.posts-list__item img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}

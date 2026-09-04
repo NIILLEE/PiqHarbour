@@ -1,0 +1,44 @@
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: var(--color-navy-deep);
+  border-bottom: 1px solid var(--color-blue-light);
+}
+
+.site-header__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.site-header__logo {
+  height: 32px;
+  width: auto;
+}
+
+.site-header__name {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--color-white);
+}
+
+.site-header__nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.site-header__nav a,
+.site-header__user a {
+  font-family: var(--font-ui);
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.site-header__nav a:hover,
+.site-header__user a:hover {
+  color: var(--color-blue-light);
+}

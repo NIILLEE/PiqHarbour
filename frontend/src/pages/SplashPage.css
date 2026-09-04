@@ -1,0 +1,94 @@
+.splash {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.splash__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+}
+
+.splash__brand {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.splash__logo {
+  height: 40px;
+}
+
+.splash__name {
+  font-family: var(--font-ui);
+  font-size: 1.5rem;
+  color: var(--color-white);
+}
+
+.splash__actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.splash__actions button {
+  font-family: var(--font-ui);
+  background: transparent;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.splash__actions button:hover {
+  background-color: var(--color-white);
+  color: var(--color-navy-deep);
+}
+
+.splash__main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.splash__panel {
+  background-color: rgba(11, 17, 80, 0.55);
+  backdrop-filter: blur(4px);
+  border-radius: 16px;
+  padding: 2.5rem;
+  max-width: 500px;
+  border: 1px solid var(--color-blue-light);
+}
+
+.splash__panel h1 {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 2.2rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.splash__panel p {
+  font-family: var(--font-body);
+  color: var(--color-white);
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.splash__tagline {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-blue-light);
+}
+
+.splash__footer {
+  text-align: center;
+  padding: 1rem;
+  font-family: var(--font-ui);
+  color: var(--color-white);
+  font-size: 0.8rem;
+}

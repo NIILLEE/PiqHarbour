@@ -1,0 +1,42 @@
+:root {
+  --color-navy: #0B1150;
+  --color-navy-deep: #060A33;
+  --color-teal: #0E9488;
+  --color-blue: #2166B5;
+  --color-blue-light: #A9C8ED;
+  --color-white: #F4F8FB;
+
+  --font-display: 'Playfair Display', serif;
+  --font-ui: 'Space Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--color-white);
+  background-image: url('./assets/OCEAN.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-color: rgba(6, 10, 51, 0.45);
+  z-index: -1;
+}
+
+body {
+  position: relative;
+  z-index: 0;
+}

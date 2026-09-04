@@ -1,0 +1,22 @@
+.friends {
+  margin-top: 1.5rem;
+}
+
+.friends h3 {
+  font-family: var(--font-ui);
+  color: var(--color-white);
+  margin-bottom: 0.75rem;
+}
+
+.friends__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.friends--hidden {
+  font-family: var(--font-body);
+  color: var(--color-blue-light);
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+}
