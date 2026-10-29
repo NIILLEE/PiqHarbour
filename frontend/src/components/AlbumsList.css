@@ -1,0 +1,24 @@
+/* Shariff Muhammad u23611732 */
+
+.albums-list {
+  margin-top: 1rem;
+}
+
+.albums-list h3 {
+  font-family: var(--font-ui);
+  color: var(--color-white);
+  margin-bottom: 0.75rem;
+}
+
+.albums-list__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.25rem;
+  padding-right: 8px;
+}
+
+.albums-list__empty {
+  font-family: var(--font-body);
+  color: var(--color-blue-light);
+  font-size: 0.9rem;
+}

@@ -1,0 +1,47 @@
+/* Shariff Muhammad 23611732 */
+
+.friend-requests {
+  margin-top: 1.5rem;
+  max-width: 420px;
+  background-color: rgba(6, 10, 51, 0.6);
+  border: 1px solid var(--color-blue-light);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.friend-requests h3 {
+  font-family: var(--font-ui);
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+.friend-requests__list {
+  list-style: none;
+}
+
+.friend-requests__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.friend-requests__actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.friend-requests__actions button {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.friend-requests__actions button:hover {
+  background-color: var(--color-teal);
+}

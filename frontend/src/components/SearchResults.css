@@ -1,0 +1,55 @@
+/* Shariff Muhammad 23611732 */
+
+.search-results {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.search-results__title {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.8rem;
+  color: var(--color-white);
+  margin-bottom: 1rem;
+}
+
+.search-results__section {
+  margin-bottom: 1.5rem;
+}
+
+.search-results__section h3 {
+  font-family: var(--font-ui);
+  color: var(--color-white);
+  margin-bottom: 0.75rem;
+}
+
+.search-results__people {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 0.25rem;
+}
+
+.search-results__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.search-results__tag {
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-white);
+  text-decoration: none;
+  border: 1px solid var(--color-blue-light);
+  border-radius: 999px;
+  padding: 0.3rem 0.9rem;
+}
+
+.search-results__tag span {
+  color: var(--color-blue-light);
+}
+
+.search-results__tag:hover {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
+}

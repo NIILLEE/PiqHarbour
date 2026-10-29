@@ -1,31 +1,52 @@
+/* Shariff Muhammad u23611732 */
+
 import { useState } from 'react';
+
+import Avatar from './Avatar';
 import EditProfile from './EditProfile';
 
 import './Profile.css';
 
-function Profile({ user, isOwnProfile }){
+function Profile({ user, isOwnProfile, canViewFull, onSave }){
 
   const [editing, setEditing] = useState(false);
 
+  async function handleSave(updates){
+
+    const message = await onSave(updates);
+
+    if (!message){
+      setEditing(false);
+    }
+
+    return message;
+
+  }
+
   if (editing){
-    return <EditProfile user={user} onClose={() => setEditing(false)} />;
+    return <EditProfile user={user} onSave={handleSave} onClose={() => setEditing(false)} />;
   }
 
   return (
     <div className="profile">
-      <img src={user.avatarUrl} alt={`${user.username}'s avatar`} className="profile__avatar" />
-      <h1 className="profile__fullname">{user.fullName}</h1>
+      <Avatar user={user} size="lg" />
+      <h1 className="profile__fullname">{user.fullName || user.username}</h1>
       <p className="profile__username">@{user.username}</p>
-      <p className="profile__bio">{user.bio}</p>
 
-      {user.links.length > 0 && (
-        <div className="profile__links">
-          {user.links.map((link) => (
-            <a key={link} href={link} target="_blank" rel="noreferrer">
-              {link}
-            </a>
-          ))}
-        </div>
+      {canViewFull && (
+        <>
+          {user.bio && <p className="profile__bio">{user.bio}</p>}
+
+          {user.links.length > 0 && (
+            <div className="profile__links">
+              {user.links.map((link) => (
+                <a key={link} href={link} target="_blank" rel="noreferrer">
+                  {link}
+                </a>
+              ))}
+            </div>
+          )}
+        </>
       )}
 
       {isOwnProfile && (

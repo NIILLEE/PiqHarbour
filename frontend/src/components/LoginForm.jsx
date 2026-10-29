@@ -1,3 +1,7 @@
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import { API_URL } from '../api';
+
 import { useState } from 'react';
 import './AuthForm.css';
 
@@ -6,6 +10,10 @@ function LoginForm(){
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errors, setErrors] = useState({});
+
+  const [serverError, setServerError] = useState('');
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
   function validate(){
 
@@ -27,19 +35,30 @@ function LoginForm(){
   async function handleSubmit(e){
     
     e.preventDefault();
+    setServerError('');
 
-    if (validate()){
-        try {
-            const response = await fetch('http://localhost:3000/login', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ email, password }),
-            });
-            const data = await response.json();
-            console.log('Login response:', data);
-        } catch(err){
-            console.error('Login request failed:', err);
-        }
+    if (!validate()){
+      return;
+    }
+
+    try {
+      const response = await fetch(`${API_URL}/auth/login`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+
+      if (!data.success){
+        setServerError(data.message);
+        return;
+      }
+
+      login(data.user);
+      navigate('/home');
+    } catch {
+      setServerError('An unexpected error occurred. Please try again later.');
     }
 
   }
@@ -64,7 +83,7 @@ function LoginForm(){
         value={password}
         onChange={(e) => setPassword(e.target.value)}
       />
-      {errors.password && <span className="auth-form__error">{errors.password}</span>}
+      {serverError && <span className="auth-form__error">{serverError}</span>}
 
       <button type="submit">Log In</button>
     </form>

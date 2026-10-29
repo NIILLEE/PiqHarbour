@@ -55,3 +55,54 @@
 .post__edit-btn:hover {
   background-color: var(--color-teal);
 }
+
+.post__author,
+.post__hashtag {
+  text-decoration: none;
+}
+
+.post__hashtag:hover {
+  color: var(--color-blue-light);
+}
+
+.post__date {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-blue-light);
+  margin-bottom: 0.75rem;
+}
+
+.post__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.post__delete-btn {
+  font-family: var(--font-ui);
+  background-color: #8E2F3F;
+  color: var(--color-white);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.post__delete-btn:hover {
+  background-color: #B33A4F;
+}
+
+.post__confirm-text {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-white);
+}
+
+.post__error {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: #E88A8A;
+  margin-top: 0.5rem;
+}

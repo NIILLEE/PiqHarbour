@@ -48,3 +48,48 @@
 .create-post button:hover {
   background-color: var(--color-teal);
 }
+
+.create-post__preview {
+  width: 100%;
+  max-height: 220px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.create-post__error {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: #E88A8A;
+}
+
+.create-post button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.comments__label,
+.comments__error {
+  flex-basis: 100%;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+}
+
+.comments__label {
+  color: var(--color-blue-light);
+}
+
+.comments__error {
+  color: #E88A8A;
+}
+
+.comments__empty {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-blue-light);
+  margin-bottom: 0.75rem;
+}
+
+.comments__list a {
+  color: var(--color-blue-light);
+  text-decoration: none;
+}

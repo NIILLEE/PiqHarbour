@@ -1,3 +1,5 @@
+/* Shariff Muhammad 23611732 */
+
 .site-header {
   display: flex;
   align-items: center;
@@ -5,6 +7,8 @@
   padding: 1rem 2rem;
   background-color: var(--color-navy-deep);
   border-bottom: 1px solid var(--color-blue-light);
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .site-header__brand {
@@ -41,4 +45,26 @@
 .site-header__nav a:hover,
 .site-header__user a:hover {
   color: var(--color-blue-light);
+}
+
+.site-header__user {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.site-header__user button {
+  font-family: var(--font-ui);
+  background: transparent;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  padding: 0.35rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.site-header__user button:hover {
+  background-color: var(--color-white);
+  color: var(--color-navy-deep);
 }

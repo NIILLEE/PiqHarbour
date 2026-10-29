@@ -1,0 +1,36 @@
+/* Shariff Muhammad u23611732 */
+
+.avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--color-blue-light);
+    flex-shrink: 0;
+}
+
+.avatar--sm {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+}
+
+.avatar--md {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+}
+
+.avatar--lg {
+    width: 120px;
+    height: 120px;
+    font-size: 3rem;
+}
+
+.avatar--placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--color-teal), var(--color-navy));
+    color: var(--color-white);
+    font-family: var(--font-display);
+    font-style: italic;
+}

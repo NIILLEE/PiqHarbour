@@ -1,7 +1,16 @@
 import { useState } from 'react';
+
+import { useNavigate } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+import { API_URL } from '../api';
+
 import './AuthForm.css';
 
 function SignUpForm(){
+
+  const [serverError, setServerError] = useState('');
+  const { login } = useAuth();
+  const navigate = useNavigate();
 
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
@@ -37,18 +46,31 @@ function SignUpForm(){
   async function handleSubmit(e){
 
     e.preventDefault();
+    setServerError('');
+
+    if (!validate()){
+      return;
+    }
 
     if (validate()){
       try {
-        const response = await fetch('http://localhost:3000/signup', {
+        const response = await fetch(`${API_URL}/auth/signup`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username, email, password }),
         });
+
         const data = await response.json();
-        console.log('Signup response:', data);
+
+        if (!data.success){
+          setServerError(data.message);
+          return;
+        }
+
+        login(data.user);
+        navigate('/home');
       } catch (err) {
-        console.error('Signup request failed:', err);
+        setServerError('An unexpected error occurred. Please try again later.');
       }
     }
     
@@ -92,10 +114,8 @@ function SignUpForm(){
         value={confirmPassword}
         onChange={(e) => setConfirmPassword(e.target.value)}
       />
-      {errors.confirmPassword && (
-        <span className="auth-form__error">{errors.confirmPassword}</span>
-      )}
 
+      {serverError && <span className="auth-error__error">{serverError}</span>}
       <button type="submit">Sign Up</button>
     </form>
   );

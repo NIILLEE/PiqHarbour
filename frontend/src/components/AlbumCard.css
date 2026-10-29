@@ -1,0 +1,51 @@
+/* Shariff Muhammad u23611732 */
+
+.album-card {
+  display: block;
+  text-decoration: none;
+  background-color: rgba(6, 10, 51, 0.6);
+  border: 1px solid var(--color-blue-light);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow:
+    4px 4px 0 -1px rgba(169, 200, 237, 0.35),
+    8px 8px 0 -2px rgba(169, 200, 237, 0.18);
+  transition: transform 0.15s;
+}
+
+.album-card:hover {
+  transform: translateY(-3px);
+}
+
+.album-card__cover {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.album-card__cover--empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-teal), var(--color-navy));
+  color: var(--color-white);
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+.album-card__info {
+  padding: 0.6rem 0.75rem;
+}
+
+.album-card__name {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  color: var(--color-white);
+}
+
+.album-card__count {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-blue-light);
+}

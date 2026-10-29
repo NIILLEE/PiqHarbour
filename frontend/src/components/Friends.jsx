@@ -18,7 +18,7 @@ function Friends({ friends, visible }){
       <h3>Friends ({friends.length})</h3>
       <div className="friends__list">
         {friends.map((friend) => (
-          <ProfilePreview key={friend.id} user={friend} />
+          <ProfilePreview key={friend._id} user={friend} />
         ))}
       </div>
     </div>

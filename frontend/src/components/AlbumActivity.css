@@ -1,0 +1,19 @@
+/* Shariff Muhammad 23611732 */
+
+.album-activity {
+  background-color: rgba(6, 10, 51, 0.6);
+  border: 1px solid var(--color-blue-light);
+  border-radius: 12px;
+  padding: 1rem;
+}
+
+.album-activity__description {
+  font-family: var(--font-body);
+  color: var(--color-white);
+  margin-bottom: 0.75rem;
+}
+
+.album-activity__card {
+  max-width: 260px;
+  padding-right: 8px;
+}

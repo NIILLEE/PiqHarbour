@@ -55,3 +55,9 @@
 .profile__edit-btn:hover {
   background-color: var(--color-teal);
 }
+
+.posts-list__empty {
+  font-family: var(--font-body);
+  color: var(--color-blue-light);
+  font-size: 0.9rem;
+}

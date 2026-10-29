@@ -1,0 +1,159 @@
+/* Shariff Muhammad u23611732 */
+
+.album {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.album__back {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  color: var(--color-blue-light);
+  text-decoration: none;
+}
+
+.album__back:hover {
+  color: var(--color-white);
+}
+
+.album__header {
+  margin: 1rem 0 1.5rem;
+  background-color: rgba(6, 10, 51, 0.6);
+  border: 1px solid var(--color-blue-light);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+}
+
+.album__name {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 2rem;
+  color: var(--color-white);
+}
+
+.album__owner {
+  display: inline-block;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--color-blue-light);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+}
+
+.album__description {
+  font-family: var(--font-body);
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+
+.album__hashtags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.album__hashtag {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-teal);
+  text-decoration: none;
+}
+
+.album__hashtag:hover {
+  color: var(--color-blue-light);
+}
+
+.album__count {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-blue-light);
+  margin-bottom: 0.75rem;
+}
+
+.album__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.album__btn {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  border: none;
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.album__btn:hover {
+  background-color: var(--color-teal);
+}
+
+.album__btn--danger {
+  background-color: #8E2F3F;
+}
+
+.album__btn--danger:hover {
+  background-color: #B33A4F;
+}
+
+.album__confirm-text {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: var(--color-white);
+}
+
+.album__error {
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: #E88A8A;
+  margin-top: 0.5rem;
+}
+
+.album__empty {
+  font-family: var(--font-body);
+  color: var(--color-blue-light);
+}
+
+.album__grid {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 0.75rem;
+}
+
+.album__item {
+  position: relative;
+}
+
+.album__item img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.album__remove {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  background-color: rgba(6, 10, 51, 0.8);
+  color: var(--color-white);
+  border: 1px solid var(--color-blue-light);
+  padding: 0.25rem 0.55rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.album__remove:hover {
+  background-color: #8E2F3F;
+  border-color: #8E2F3F;
+}

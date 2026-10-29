@@ -1,8 +1,26 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useSearchParams } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
+
+import SearchInput from './SearchInput';
+
 import piqhLogo from '../assets/PIQH2.png';
 import './Header.css';
 
 function Header() {
+
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get('q') ?? '';
+
+  function handleLogout(){
+
+    logout();
+    navigate('/');
+
+  }
+
   return (
     <header className="site-header">
       <div className="site-header__brand">
@@ -12,12 +30,18 @@ function Header() {
 
       <nav className="site-header__nav">
         <Link to="/home">Home</Link>
-        <Link to="/post/1">Posts</Link>
-        <Link to="/search">Search</Link>
+          {user && (
+            <Link to={`/profile/${user._id}`} state={{ tab: 'posts' }}>
+              Posts
+            </Link>
+          )}
       </nav>
 
+      <SearchInput key={query} initialValue={query} />
+
       <div className="site-header__user">
-        <Link to="/profile/1">@username</Link>
+        <Link to={`/profile/${user._id}`}>@{user.username}</Link>
+        <button onClick={handleLogout}>Log Out</button>
       </div>
     </header>
   );

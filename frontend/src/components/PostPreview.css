@@ -1,24 +1,20 @@
+/* Shariff Muhammad 23611732 */
+
 .post-preview {
   background-color: rgba(6, 10, 51, 0.6);
   border: 1px solid var(--color-blue-light);
   border-radius: 12px;
   padding: 1rem;
-  max-width: 420px;
-  margin-bottom: 1.5rem;
-}
-
-.post-preview__author {
-  font-family: var(--font-ui);
-  color: var(--color-blue-light);
-  text-decoration: none;
-  font-size: 0.85rem;
+  
 }
 
 .post-preview__image {
-  width: 100%;
-  border-radius: 8px;
-  margin: 0.5rem 0;
   display: block;
+  width: 100%;
+  max-height: 460px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
 }
 
 .post-preview__description {
@@ -29,26 +25,19 @@
 
 .post-preview__hashtags {
   display: flex;
+  flex-wrap: wrap;
   gap: 0.5rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
 }
 
 .post-preview__hashtag {
   font-family: var(--font-ui);
   font-size: 0.75rem;
   color: var(--color-teal);
+  text-decoration: none;
 }
 
-.post-preview__meta {
-  display: flex;
-  gap: 1rem;
-  font-family: var(--font-body);
-  font-size: 0.8rem;
-  color: var(--color-blue-light);
-  margin-bottom: 0.5rem;
-}
-
-.post-preview__meta a {
+.post-preview__hashtag:hover {
   color: var(--color-blue-light);
 }
 
@@ -59,8 +48,50 @@
   color: var(--color-white);
   border-top: 1px solid rgba(169, 200, 237, 0.3);
   padding-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .post-preview__comments li {
   margin-bottom: 0.25rem;
+}
+
+.post-preview__link {
+  font-family: var(--font-ui);
+  font-size: 0.75rem;
+  color: var(--color-blue-light);
+  text-decoration: none;
+}
+
+.post-preview__link:hover {
+  color: var(--color-white);
+}
+
+.post-preview__hidden {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  border: 1px dashed var(--color-blue-light);
+  border-radius: 8px;
+}
+
+.post-preview__hidden p {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-blue-light);
+  margin-bottom: 0.75rem;
+}
+
+.post-preview__hidden button {
+  font-family: var(--font-ui);
+  font-size: 0.8rem;
+  background: transparent;
+  border: 1px solid var(--color-blue-light);
+  color: var(--color-white);
+  padding: 0.4rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.post-preview__hidden button:hover {
+  background-color: var(--color-blue);
+  border-color: var(--color-blue);
 }
